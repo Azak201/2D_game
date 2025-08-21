@@ -6,8 +6,8 @@ OBJ =$(SRCS:srcs/%.c=obj/%.o)
 NAME=so_long
 
 CC = cc 
-CFLAGS = -Wall -Wextra -Werror -I./libft/includes -I./includes
-LINKER= -L./libft/ -lft -lmlx -lXext -lX11
+CFLAGS = -Wall -Wextra -Werror -I./libft/includes -I./includes -I./minilibx-linux/
+LINKER= -L./libft/ -lft -L./minilibx-linux/ -lmlx -lXext -lX11
 LIB_PATH = ./libft
 
 all: libft $(NAME)
